@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    tools:context="com.servicesprac.musicxplayer.BottomPlayer">
+
+    <RelativeLayout
+        android:id="@+id/card_bottom_player"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#FFFFFF"
+        android:elevation="10dp"
+        android:padding="5dp">
+
+
+        <ImageView
+            android:id="@+id/skip_prev_bottom"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_centerVertical="true"
+            android:layout_toStartOf="@id/play_song"
+            android:src="@drawable/prevbtn" />
+
+        <ImageView
+            android:id="@+id/play_song"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:layout_toStartOf="@id/skip_next_bottom"
+            android:padding="10dp"
+            android:scaleType="centerCrop"
+            android:src="@drawable/playbtn"
+            />
+
+        <ImageView
+            android:id="@+id/skip_next_bottom"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"
+            android:layout_marginEnd="30dp"
+            android:src="@drawable/nextbtn"
+            />
+
+
+        <TextView
+            android:id="@+id/songname_mini"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignTop="@+id/skip_prev_bottom"
+            android:layout_alignBottom="@+id/skip_prev_bottom"
+            android:layout_alignParentStart="true"
+            android:layout_centerVertical="true"
+            android:layout_marginStart="20dp"
+            android:layout_marginEnd="30dp"
+            android:layout_toStartOf="@+id/skip_prev_bottom"
+            android:ellipsize="marquee"
+            android:fadingEdge="horizontal"
+            android:marqueeRepeatLimit="marquee_forever"
+            android:maxLines="1"
+            android:scrollHorizontally="true"
+            android:singleLine="true"
+            android:text="Song name here"
+            android:textColor="#000000"
+            android:textSize="18sp"
+            tools:ignore="EllipsizeMaxLines" />
+
+
+    </RelativeLayout>
+
+
+</FrameLayout>
